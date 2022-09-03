@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        section{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        section .parent{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-position: center;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 0 66%);
+            -moz-clip-path: polygon(0 0, 100% 0, 100% 82%, 0 66%);
+            -mo-clip-path: polygon(0 0, 100% 0, 100% 82%, 0 66%);
+            clip-path: polygon(0 0, 100% 0, 100% 82%, 0 66%);
+        }
+        section div .child{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color:#E16FBB;
+            opacity: 0.98;
+            
+        }
+
+        section div div div{
+            position: absolute;
+            top: 10%;
+            float: left;
+            width: 50%;
+            margin: 2em;
+            margin-top: 1em;
+            padding: 1em;
+            color: #000000;
+
+        }
+        section div div div h2{
+            margin: 20px;
+            margin-top: 0%;
+            margin-bottom: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 3em;
+            text-transform: uppercase;
+            text-align: left;
+            
+        }
+        .para,
+        section div div div p{
+            margin: 20px;
+            margin-top: 0%;
+            font-family:cursive;
+            font-size: 1.5em;
+        }
+
+        section figure, .figures,
+        section div div figure{
+            position: absolute;
+            top: 10%;
+            left: 70%;
+            width: 50%;
+            margin: 1em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <section class="grandparent">
+        <figure>
+            <img src="blackgirl.png" alt="" srcset="">
+        </figure>
+
+        <div class="parent">
+            <div class="child">
+                <div>
+                    <h2>all about stem </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum nostrum ex placeat eligendi quo magnam cupiditate delectus possimus, illo debitis consequatur deserunt veniam recusandae dolorum eaque veritatis nisi aut? 
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dolore, tenetur quasi placeat natus exercitationem consequuntur corporis maiores minima dolorem, sit nulla doloribus deleniti aspernatur repellendus vitae assumenda nam nostrum.
+                    </p>
+                </div>
+                <figure>
+                    <img src="blackgirl.png" alt="" srcset="">
+                </figure>
+            </div>
+        </div>
+    </section> -->
+
+
+    <section id="ABOUT" class="grandparent">
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div>
+                    <h2>all about stem </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum nostrum ex placeat eligendi quo magnam cupiditate delectus possimus, illo debitis consequatur deserunt veniam recusandae dolorum eaque veritatis nisi aut? 
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dolore, tenetur quasi placeat natus exercitationem consequuntur corporis maiores minima dolorem, sit nulla doloribus deleniti aspernatur repellendus vitae assumenda nam nostrum.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <figure class="figures">
+                    <img src="blackgirl.png" alt="" srcset="">
+                </figure>
+            </div>
+
+        </div>
+
+       <div class="container parent">
+
+            <div class="row child">
+
+                <div class="col-sm-6">
+                    <div>
+                        <h2>all about stem </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum nostrum ex placeat eligendi quo magnam cupiditate delectus possimus, illo debitis consequatur deserunt veniam recusandae dolorum eaque veritatis nisi aut? 
+                        </p>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dolore, tenetur quasi placeat natus exercitationem consequuntur corporis maiores minima dolorem, sit nulla doloribus deleniti aspernatur repellendus vitae assumenda nam nostrum.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <figure class="figures">
+                        <img src="blackgirl.png" alt="" srcset="">
+                    </figure>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv=" X-UA-Compatible" content=" IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="./../bootstrap4-glyphicons-master/bootstrap4-glyphicons/css/bootstrap-glyphicons.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./../css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./../css/bootstrap-grid.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-grid.min.css"> -->
+    <link rel="stylesheet" href="./../css/customStyle.css">
+    
+    
+    <!--[if lt IE 9]>
+    <script src=" https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src=" https://oss maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>User Dashboard > Profile</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+
+  
+    <div id="mySidenav" class="sidenav p-0 shadow">
+        <a class="navbar-brand text-center p-2 m-2" href="index.html">
+            <img src="/imgs/pinklogo.svg" class="w-25" alt="logo" srcset="">
+        </a>
+        <div class="nav flex-column nav-pills d-flex"  role="tablist" aria-orientation="vertical">
+            <a class="nav-link text-center p-2 border border-light text-light rounded-0" href="index.html" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</a>
+            <a class="nav-link text-center p-2 border border-light rounded-0" href="UserProfile.html" role="tab" aria-controls="v-pills-profile" aria-selected="false" style="background-color: #EEA1D4; color: rgb(43, 41, 41);">User Profile</a>
+            <a class="nav-link text-center p-2 border border-light text-light rounded-0" href="UserEvents.html" role="tab" aria-controls="v-pills-messages" aria-selected="false">Events</a>
+            <a class="nav-link text-center p-2 border border-light text-light rounded-0" href="UserOpportunities.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Opportunities</a>
+            <a class="nav-link text-center p-2 border border-light text-light rounded-0" href="UserChatRoom.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Chat Room</a>
+            <a class="nav-link text-center p-2 border border-light text-light rounded-0" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Log out</a>
+            
+            <ul class="list-group list-group-horizontal-sm flex-row justify-content-center align-items-end" style="height: 40vh;">
+                <li class="px-2 list-group-item bg-transparent border-0 rounded-0">
+                    <span class="m-0 glyphicon glyphicon-user">
+
+                    </span>
+                </li>
+                <li class="px-2 list-group-item bg-transparent border-0 rounded-0">
+                    <span class="m-0 glyphicon glyphicon-thumbs-up"></span>
+                </li>
+                <li class="px-2 list-group-item bg-transparent border-0 rounded-0">
+                    <span class="m-0 glyphicon glyphicon-book">
+
+                    </span>
+                </li>
+                <li class="px-2 list-group-item bg-transparent border-0 rounded-0">
+                    <span class="m-0 glyphicon glyphicon-shopping-cart">
+
+                    </span>
+                </li>
+                <li class="px-2 list-group-item bg-transparent border-0 rounded-0">
+                    <span class="m-0 glyphicon glyphicon-log-out">
+
+                    </span>
+                </li>
+              </ul>
+          </div><!--nav-->
+    </div><!--mySidenav-->
+           
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+      <div id="main" style="height: 100vh;">
+        <!-- Use any element to open the sidenav -->
+        <span class="closebtn sticky-top position-fixed ml-1">
+            <div class="containers" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </span>
+
+        <div class="row overflow-hidden" style="background-color: #E16FBB;">
+            <div class="col-sm-7 text-light text-right">
+                <h3 class="h3" style="opacity: .5;">
+                    User Profile
+                </h3>
+            </div><!--col-sm-7-->
+            <div class="col-sm-5 text-right">
+                <img src="./../imgs/profile.jpg" class="m-1 rouned shadow" width="40" alt="profile">
+            </div><!--col-sm-5-->
+        </div><!--row header-->
+
+        <div class="my-3">
+            <div class="container" style="height: 100vh;">
+
+                <div class="row shadow-lg my-3" style="background-image: url(./../imgs/bannerPic.jpg);height:30vh;background-position: center; background-size: cover;border-radius: 10px;">
+                    <div class="col-sm-6 col-md-4 align-self-end overflow-hidden">
+                        <button type="button" data-toggle="modal" data-target="#editPhoto" class="btn btn-light rounded-pill m-2" style="opacity: .6;">edit photo
+                            <span class="glyphicon glyphicon-camera"></span>
+                        </button>
+                        
+                    </div>
+                    <div class="col-sm-6 col-md-7 align-self-end overflow-hidden">
+                        <img src="./../imgs/profile.jpg" class="mx-3 shadow m-1" width="200" alt="profile" style="border-radius: 10px;">
+                    </div>
+                </div><!--banner row-->
+
+                <div class="row bg-transparent border border-light flex-column overflow-hidden shadow-lg p-2 my-3" style="opacity: .9;">
+                    <h1 class="h2 text-center mt-2" style="color: #7F7F7F;"> QUEEN BORN </h1>
+                    <p class="text-center" style="font-weight: 500;color: #4E4B4B;">
+                        Queen is a masters degree graduate from the University of Mzuzu.
+                    </p>
+                    
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-sm-6 text-left">
+                                <button type="button" data-toggle="modal" data-target="#editProfile" class="btn btn-light rounded-pill m-2 btn-primary btn-sm">edit profile
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <button type="button" data-toggle="modal" data-target="#editDescription" class="btn btn-light rounded-pill m-2 btn-primary btn-sm">edit description
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--2nd row-->
+
+                <h2 class="h4 overflow-hidden" style="color: #ABA4A4;">Other STEMIANS</h2>
+                <div class="row border border-light overflow-auto shadow rounded p-2" style="max-height: 35vh;">
+                    
+                    <div class="col bg-transparent p-2" data-toggle="modal" data-target="#stemian1" >
+                        <div class="card mx-2" style="width: 10rem;border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                            <img src="./../imgs/pen lady.png" class="card-img-top" alt="..." style="background-color: #E273BD;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Stella</h5>
+                              <a href="#" class="btn btn-primary btn-sm w-100 rounded-pill">view</a>
+                            </div><!--card body-->
+                        </div><!--card-->
+                    </div><!--col-->
+
+                    <div class="col bg-transparent p-2" data-toggle="modal" data-target="#stemian2">
+                        <div class="card mx-2" style="width: 10rem;border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                            <img src="./../imgs/pen lady.png" class="card-img-top" alt="..." style="background-color: #E273BD;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Stella</h5>
+                              <a href="#" class="btn btn-primary btn-sm w-100 rounded-pill">view</a>
+                            </div><!--card body-->
+                        </div><!--card-->
+                    </div><!--col--> 
+
+
+                    <div class="col bg-transparent p-2" data-toggle="modal" data-target="#stemian3">
+                        <div class="card mx-2" style="width: 10rem;border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                            <img src="./../imgs/pen lady.png" class="card-img-top" alt="..." style="background-color: #E273BD;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Stella</h5>
+                              <a href="#" class="btn btn-primary btn-sm w-100 rounded-pill">view</a>
+                            </div><!--card body-->
+                        </div><!--card-->
+                    </div><!--col-->
+
+                    <div class="col bg-transparent p-2" data-toggle="modal" data-target="#stemian4">
+                        <div class="card mx-2" style="width: 10rem;border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                            <img src="./../imgs/pen lady.png" class="card-img-top" alt="..." style="background-color: #E273BD;">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Stella</h5>
+                              <a href="#" class="btn btn-primary btn-sm w-100 rounded-pill">view</a>
+                            </div><!--card body-->
+                        </div><!--card-->
+                    </div><!--col-->
+
+                    
+                    
+                </div><!--3rd row-->
+                
+            </div> <!--container-->
+        </div><!--container-->
+      </div><!--main-->
+
+      <!--modals-->
+
+      <div class="modal fade" id="editPhoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">CHANCE PROFILE PICTURE</h5>
+              <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-row align-items-center justify-content-center w-100 flex-column overflow-hidden">
+                        
+                    <label class="w-75 overflow-hidden">Photo
+                        <span class="glyphicon glyphicon-camera" style="color: #7F7F7F;"></span>
+                    </label>
+                    <input type="file" class="form-control-file w-100" id="exampleFormControlFile1"  style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(76, 180, 50, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                </div>         
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger col-6" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn border border-success text-success col-6">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--editphoto-->
+
+      <div class="modal fade" id="editProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">EDIT PROFILE</h5>
+              <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form class="w-100">
+                    <div class="form-row justify-content-around align-items-center">
+
+                      <div class="form-row align-items-center justify-content-center flex-column">
+                        <label class="w-75 overflow-hidden">Name
+                            <span class="glyphicon glyphicon-user" style="color: #7F7F7F;"></span>
+                        </label>
+                        <input type="text" class="form-control w-75" placeholder="First name" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(76, 180, 50, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                      </div>
+
+                      <div class="form-row align-items-center justify-content-center flex-column">
+                        <label class="w-75 overflow-hidden">Surname
+                            <span class="glyphicon glyphicon-user" style="color: #7F7F7F;"></span>
+                        </label>
+                        <input type="text" class="form-control w-75" placeholder="Surname" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(76, 180, 50, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                      </div>
+
+                    <div class="form-row align-items-center justify-content-center flex-column">
+                        <label class="w-75 overflow-hidden">Email
+                            <span class="glyphicon glyphicon-envelope" style="color: #7F7F7F;"></span>
+                        </label>
+                        <input type="email" class="form-control w-75" placeholder="Email" id="inputEmail4" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(76, 180, 50, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    </div>
+
+                    <div class="col-6 my-3">
+                        <textarea class="form-control"rows="11" id="comment" placeholder="self description..." style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(76, 180, 50, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></textarea>
+                    </div>
+
+
+
+                    </div><!--form 1st row-->
+                    <div class="form-row align-items-center justify-content-center w-100 flex-column overflow-hidden">
+                        
+                        <label class="w-75 overflow-hidden">Photo
+                            <span class="glyphicon glyphicon-camera" style="color: #7F7F7F;"></span>
+                        </label>
+                        <input type="file" class="form-control-file w-100" id="exampleFormControlFile1"  style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(76, 180, 50, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    </div>
+                  </form><!--form-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger col-6" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn border border-success text-success col-6">Save changes</button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--editprofile-->
+
+      <div class="modal fade" id="editDescription" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-12 my-3">
+                    <textarea class="form-control w-100"rows="11" id="comment" placeholder="self description..." style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(76, 180, 50, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger col-6" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn border border-success text-success col-6">Save changes</button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--editDescription-->
+
+      <div class="modal fade" id="editdetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger col-6" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn border border-success text-success col-6">Save changes</button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--editdetails-->
+
+
+
+
+      <div class="modal fade" id="stemian1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Fellow Stemian</h5>
+              <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row">
+                <div class="col-4">
+                  <img src="./../imgs/pen lady.png" class="card-img-top" alt="..." style="background-color: #E273BD;">
+                </div>
+                <div class="col">
+                  <div class="col-12">
+                    <h5 class="card-title text-center">Stella</h5>
+                  </div>
+
+                  <div class="col-12">
+                    <p class="text-center" style="font-weight: 500;color: #4E4B4B;">
+                      Queen is a masters degree graduate from the University of Mzuzu.
+                  </p>
+                </div>
+                </div>
+              </div>
+                        
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger col-6" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn border border-info text-info col-6">follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--stemian 1-->
+
+      <div class="modal fade" id="stemian2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Fellow Stemian</h5>
+              <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row">
+                <div class="col-4">
+                  <img src="./../imgs/pen lady.png" class="card-img-top" alt="..." style="background-color: #E273BD;">
+                </div>
+                <div class="col">
+                  <div class="col-12">
+                    <h5 class="card-title text-center">Stella</h5>
+                  </div>
+
+                  <div class="col-12">
+                    <p class="text-center" style="font-weight: 500;color: #4E4B4B;">
+                      Queen is a masters degree graduate from the University of Mzuzu.
+                  </p>
+                </div>
+                </div>
+              </div>
+                        
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger col-6" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn border border-info text-info col-6">follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--stemian 2-->
+
+      <div class="modal fade" id="stemian3" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Fellow Stemian</h5>
+              <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row">
+                <div class="col-4">
+                  <img src="./../imgs/pen lady.png" class="card-img-top" alt="..." style="background-color: #E273BD;">
+                </div>
+                <div class="col">
+                  <div class="col-12">
+                    <h5 class="card-title text-center">Stella</h5>
+                  </div>
+
+                  <div class="col-12">
+                    <p class="text-center" style="font-weight: 500;color: #4E4B4B;">
+                      Queen is a masters degree graduate from the University of Mzuzu.
+                  </p>
+                </div>
+                </div>
+              </div>
+                        
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger col-6" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn border border-info text-info col-6">follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--stemian 3-->
+
+
+      <div class="modal fade" id="stemian4" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Fellow Stemian</h5>
+              <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row">
+                <div class="col-4">
+                  <img src="./../imgs/pen lady.png" class="card-img-top" alt="..." style="background-color: #E273BD;">
+                </div>
+                <div class="col">
+                  <div class="col-12">
+                    <h5 class="card-title text-center">Stella</h5>
+                  </div>
+
+                  <div class="col-12">
+                    <p class="text-center" style="font-weight: 500;color: #4E4B4B;">
+                      Queen is a masters degree graduate from the University of Mzuzu.
+                  </p>
+                </div>
+                </div>
+              </div>
+                        
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger col-6" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn border border-info text-info col-6">follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--stemian 4-->
+
+
+
+    <script src="./../jquery-3.5.1.slim.min.js"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="./../js/popper.min.js"></script>
+    <script src="./../js/bootstrap.bundle.js"></script>
+    <script src="./../js/bootstrap.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+
+    <script>
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+    
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+}
+
+function myFunction(x) {
+
+    if ( x.classList[1] === undefined ){
+        console.log('opened and class added');
+        openNav();
+        x.classList.toggle("change");
+    }
+    else if ( x.classList[1] === 'change' )
+    {
+        console.log('closed and class removed');
+        closeNav();
+        x.classList.toggle("change");
+    }
+}
+    </script>
+</body>
+</html>
